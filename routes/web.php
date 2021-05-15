@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\{
+    ContactController, 
+    NoteController
+};
 
 /*
 |--------------------------------------------------------------------------
@@ -17,5 +21,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-use App\Http\Controllers\ContactController;
+
 Route::get('contacts/{id?}', [ContactController::class, 'index'])->name('contacts.index');
+Route::get('note/{id?}', [NoteController::class, 'index'])->name('notes.index');
