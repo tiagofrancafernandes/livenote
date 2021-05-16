@@ -1,0 +1,10 @@
+// 1. Your custom variables and variable overwrites.
+$global-link-color: #DA7D02;
+.uk-button.uk-button-secondary{ background-color: black !important; }
+.cursor-pointer{ cursor: pointer; }
+
+@media (max-width: 550px){
+    .uk-button.mod-mobile{
+        padding: 0 !important;
+    }
+}

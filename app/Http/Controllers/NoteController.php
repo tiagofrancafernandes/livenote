@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Note;
 use Illuminate\Http\Request;
 
 class NoteController extends Controller
@@ -18,6 +19,13 @@ class NoteController extends Controller
     {
         return view('notes.notes', [
             'id' => $id,
+        ]);
+    }
+
+    public function uikit()
+    {
+        return view('uikit_note.note', [
+            'note' => Note::first(),
         ]);
     }
 }

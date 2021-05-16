@@ -25,3 +25,4 @@ Route::get('/', function () {
 Route::get('contacts/{id?}', [ContactController::class, 'index'])->name('contacts.index');
 Route::get('notes/{user_id?}', [NoteController::class, 'index'])->name('notes.index');
 Route::get('note/{id?}', [NoteController::class, 'show'])->name('notes.show');
+Route::get('uikit', [NoteController::class, 'uikit'])->name('note.uikit');
